@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>response</title>
+        <style>
+            #response1 {
+                display: none;
+                margin-top: 20px;
+                font-weight: bold;
+                color: hotpink;
+            }
+            #response2 {
+                display: none; 
+                margin-top: 20px;
+                font-weight: bold;
+                color:darkturquoise;
+            } 
+        </style>
+    </head>
+    <body>
+        <h1>Hi, do you want to be my boyfriend forever?</h1>
+        <p>I know that ldr is difficult <br> <em>sprinkle sprinkle</em> </p>
+
+        <!--Knappene-->
+        <button onclick="showResponse1()">Ofc</button>
+        <button onclick="showResponse2()">Hell, naw</button>
+
+        <!--melding som vises ved Ofc-->
+        <p id="response1"></p>
+
+        <!--melding som vises ved Hell, naw-->
+        <p id="response2"></p>
+
+        <script>
+            // Funksjon for å vise response1
+            function showResponse1() {
+                var response1 = document.getElementById("response1");
+                var response2 = document.getElementById("response2");
+                response1.textContent = "Okay, meet me at the airport around 5 P.M."
+                response1.style.display = "block";
+                response2.style.display = "none"; 
+                }
+
+            // Funksjon for å vise en response2
+            function showResponse2() {
+                var response2 = document.getElementById("response2");
+                var response1 = document.getElementById("response1");
+                response2.textContent = "Nope, you are stuck with me";
+                response2.style.display = "block";
+                response1.style.display = "none";
+            }
+        </script>
+
+    </body>
+    </html>
